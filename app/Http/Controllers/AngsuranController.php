@@ -45,6 +45,7 @@ class AngsuranController extends Controller
       $angsuran = new Angsuran;
       $angsuran->id_angsuran      = strtoupper("as-".hash('crc32b', $res['id_pinjaman'].$res['jml_angsuran'].Carbon::now()));
       $angsuran->id_pinjaman      = $res['id_pinjaman'];
+      $angsuran->id_anggota      = $res['id_anggota'];
       $angsuran->id_admin         = $request->session()->get('aktif')['id'];
       $angsuran->tgl_angsuran     = $res['tgl_angsuran'];
       $angsuran->jml_angsuran     = $res['jml_angsuran'];

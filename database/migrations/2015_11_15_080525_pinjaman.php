@@ -16,6 +16,7 @@ class Pinjaman extends Migration
         $table->string('id_pinjaman', 11);
         $table->string('id_anggota', 11);
         $table->string('id_admin', 11);
+        $table->string('status', 11);
         $table->date('tgl_pinjaman');
         $table->float('pinjaman');
         $table->float('bunga_pinjaman');
